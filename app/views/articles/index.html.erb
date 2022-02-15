@@ -1,0 +1,20 @@
+<body>
+  <h1>Articles</h1>
+  <div class="container">
+    <div class="btn-create">
+      <%= link_to new_article_path do %>
+        <div>Create New Article</div>
+      <% end %>
+    </div>
+    <div>
+      <ul>
+        <% @articles.each do |article| %>
+          <div class="element">
+            <h2><%= article.title %></h2>
+            <p><%= article.content %></p>
+          </div>
+        <% end %>
+      </ul>
+      </div>
+  </div>
+</body>
